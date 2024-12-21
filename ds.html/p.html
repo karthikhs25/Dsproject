@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Email App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <script>
+        function openComposeModal() {
+            document.getElementById('composeModal').classList.remove('hidden');
+        }
+
+        function closeComposeModal() {
+            document.getElementById('composeModal').classList.add('hidden');
+        }
+
+        function sendEmail() {
+            alert('Server not connected');
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+<div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img alt="Company logo, a stylized letter 'E' in blue and white" class="h-10 w-10" height="40" src="https://storage.googleapis.com/a1aa/image/WtVFx7ZFsxqFJdHhupNkSFxxlWg5nYfRC5eVidve1eWc42tPB.jpg" width="40"/>
+            <h1 class="text-xl font-bold">Email App</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openComposeModal()">
+                <i class="fas fa-plus"></i> Compose
+            </button>
+            <img alt="User  profile picture, a smiling person with short hair" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/9nFQQyxmjxqvK9gMd8fdEYJUoaNZcFH8U8kXZdkL9dLC3u9JA.jpg" width="40"/>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="flex flex-1">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 p-4 border-r border-gray-200">
+            <nav class="space-y-2">
+                <a class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200" href="#">
+                    <i class="fas fa-inbox"></i>
+                    <span>Inbox</span>
+                </a>
+                <a class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200" href="#">
+                    <i class="fas fa-star"></i>
+                    <span>Starred</span>
+                </a>
+                <a class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200" href="#">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Sent</span>
+                </a>
+                <a class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200" href="#">
+                    <i class="fas fa-trash"></i>
+                    <span>Trash</span>
+                </a>
+            </nav>
+        </aside>
+        <!-- Email List -->
+        <main class="flex-1 p-4">
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-4">Inbox</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-4 p-4 border-b border-gray-200">
+                        <img alt="Sender profile picture, a person with glasses and a hat" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/A14vKcfIGAVob6hfvdinHCY88e8RZbLYU7JfYNtkJMgq52tPB.jpg" width="40"/>
+                        <div class="flex-1">
+                            <h3 class="font-bold">John Doe</h3>
+                                                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        </div>
+                        <span class="text-gray-500">10:30 AM</span>
+                    </li>
+                    <li class="flex items-center space-x-4 p-4 border-b border-gray-200">
+                        <img alt="Sender profile picture, a person with long hair and a smile" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/PSXQ5vJ59OJEDlRLKQKPbk7OEcnPE8Tv7hasuuAFXHpjb3eJA.jpg" width="40"/>
+                        <div class="flex-1">
+                            <h3 class="font-bold">Jane Smith</h3>
+                            <p class="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <span class="text-gray-500">9:15 AM</span>
+                    </li>
+                    <li class="flex items-center space-x-4 p-4 border-b border-gray-200">
+                        <img alt="Sender profile picture, a person with a beard and a cap" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/VpEx9rHLcVL5LxDwos34GLnwaBQMm08wwipt8fuQLBsO3u9JA.jpg" width="40"/>
+                        <div class="flex-1">
+                            <h3 class="font-bold">Michael Brown</h3>
+                            <p class="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                        </div>
+                        <span class="text-gray-500">Yesterday</span>
+                    </li>
+                    <li class="flex items-center space-x-4 p-4 border-b border-gray-200">
+                        <img alt="Sender profile picture, a person with short hair and a serious expression" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/vuY5UwKOQmKANBfd2A1obDCT9LAL2icOvtow9fV3cyKSud7TA.jpg" width="40"/>
+                        <div class="flex-1">
+                            <h3 class="font-bold">Emily Davis</h3>
+                            <p class="text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
+                        </div>
+                        <span class="text-gray-500">2 days ago</span>
+                    </li>
+                    <li class="flex items-center space-x-4 p-4 border-b border-gray-200">
+                        <img alt="Sender profile picture, a person with curly hair and a friendly smile" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/q0gXfdhM4jSwVSffQpVJS0IEItI32MRPfHOzGtDReKagxtbfE.jpg" width="40"/>
+                        <div class="flex-1">
+                            <h3 class="font-bold">Sarah Wilson</h3>
+                            <p class="text-gray-600">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia...</p>
+                        </div>
+                        <span class="text-gray-500">3 days ago</span>
+                    </li>
+                    <!-- Add more email items as needed -->
+                </ul>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- Compose Modal -->
+<div class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden" id="composeModal">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-xl font-bold mb-4">Compose Email</h2>
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="to">To:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="to" type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">Subject:</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message:</label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="sendEmail()">
+                    Send
+                </button>
+                <button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="closeComposeModal()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
